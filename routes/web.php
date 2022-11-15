@@ -46,3 +46,23 @@ Route::post('user',[UserAuthController::class,'userLogin']);
 
 // Route::get('checkout',[CheckoutController::class,'checkout']);
 // Route::post('checkout',[CheckoutController::class,'afterpayment'])->name('checkout.credit-card');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

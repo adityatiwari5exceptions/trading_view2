@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Plan extends Model
 {
-    // use HasFactory;
-    protected $fillable = ['plan_name','billing_method','interval_count','price','currency'];
+    use HasFactory;
+    protected $fillable = ['plan_id','name','billing_method','interval_count','price','currency'];
 
 }

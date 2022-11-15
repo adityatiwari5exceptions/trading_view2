@@ -91,7 +91,7 @@
                 <h5>Fully Support</h5>
             </div>
             <div class="button">
-                <a href="{{route('plans.checkout', $professlonal->plan_id)}}" class="btn">Choose Plan</a>
+                <a href="{{route('plans.checkout', $Silver->plan_id)}}" class="btn">Choose Plan</a>
             </div>
         </div>
         <div class="innercontainer">
@@ -106,7 +106,7 @@
                 <h5>Fully Support</h5>
             </div>
             <div class="button" style="margin-top: 20px;">
-                <a href="{{route('plans.checkout', $enterprise->plan_id)}}" class="btn">Choose Plan</a>
+                <a href="{{route('plans.checkout', $gold->plan_id)}}" class="btn">Choose Plan</a>
             </div>
         </div>
     </div>

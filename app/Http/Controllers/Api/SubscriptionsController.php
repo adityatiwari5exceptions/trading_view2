@@ -7,20 +7,20 @@ use Illuminate\Http\Request;
 use App\Models\Plan;
 use App\Models\Plans1;
 use Illuminate\Support\Facades\Validator;
-
+use Illuminate\Support\Facades\Auth;
 class SubscriptionsController extends Controller
 {
     public function listSubscriptions($id = null)
     {
         $plan = $id ? Plan::select(
             "id",
-            "plan_name",
+            "name",
             "billing_method",
             "interval_count",
             "price",
             "currency"
         )->find($id) :
-            Plan::select("id", "plan_name", "billing_method", "interval_count", "price", "currency")
+            Plan::select("id", "name", "billing_method", "interval_count", "price", "currency")
             ->get();
         if ($plan) {
             return response()->json([
@@ -53,6 +53,7 @@ class SubscriptionsController extends Controller
         if ($validator->fails()) {
             return $validator->errors();
         }
+        
         $Plan = Plan::create($input);
         if ($Plan) {
             return response()->json([
@@ -114,4 +115,13 @@ class SubscriptionsController extends Controller
             ]);
         }
     }
+
+      public function create_subscription(Request $request)
+      {
+        $user = Auth::user();
+        $id = Auth::id();
+         print_r($id);die;
+      } 
+
+
 }
